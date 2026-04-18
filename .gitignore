@@ -1,0 +1,76 @@
+# ============================================================
+# .gitignore - Agedify Project
+# ============================================================
+
+# ----- Environment Variables (JANGAN DI-COMMIT!) -----
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+# Kecualikan .env.example agar bisa jadi referensi
+!.env.example
+
+# ----- Node / Frontend -----
+node_modules/
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/.cache/
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+.yarn/install-state.gz
+*.tsbuildinfo
+next-env.d.ts
+
+# ----- Python / Backend -----
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+venv/
+.venv/
+backend/__pycache__/
+backend/.pytest_cache/
+backend/.ruff_cache/
+backend/uploads/
+
+# ----- Testing -----
+coverage/
+.coverage
+test_reports/
+*.log
+
+# ----- Build Artifacts -----
+dist/
+build/
+*.egg-info/
+
+# ----- System Files -----
+.DS_Store
+Thumbs.db
+*.pem
+*.pack
+*.zip
+*.tar.gz
+*.tar
+*.tgz
+*.deb
+
+# ----- IDE / Editors -----
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ----- Deployment -----
+.vercel
+.railway/
+
+# ----- Misc -----
+archive.zip
+dump.rdb

@@ -1,0 +1,152 @@
+{
+  "identity": {
+    "name": "MostDomain.com",
+    "mission": "The premium marketplace for aged, high-authority domains.",
+    "tone": "Professional, Authoritative, Clean, Trustworthy, High-Performance.",
+    "theme": "light"
+  },
+  "typography": {
+    "font_family": {
+      "headings": "Outfit, sans-serif",
+      "body": "DM Sans, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "scale": {
+      "h1": "text-5xl md:text-6xl font-bold tracking-tight",
+      "h2": "text-4xl md:text-5xl font-semibold tracking-tight",
+      "h3": "text-2xl md:text-3xl font-semibold",
+      "body_lg": "text-lg md:text-xl leading-relaxed",
+      "body_base": "text-base leading-relaxed text-slate-600",
+      "caption": "text-sm text-slate-500 font-medium tracking-wide uppercase"
+    },
+    "installation": {
+      "google_fonts_url": "https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;700&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    }
+  },
+  "colors": {
+    "palette": {
+      "primary": {
+        "DEFAULT": "#0F172A",
+        "foreground": "#F8FAFC",
+        "50": "#F8FAFC",
+        "100": "#F1F5F9",
+        "200": "#E2E8F0",
+        "300": "#CBD5E1",
+        "400": "#94A3B8",
+        "500": "#64748B",
+        "600": "#475569",
+        "700": "#334155",
+        "800": "#1E293B",
+        "900": "#0F172A",
+        "950": "#020617"
+      },
+      "secondary": {
+        "DEFAULT": "#F1F5F9",
+        "foreground": "#0F172A"
+      },
+      "accent": {
+        "DEFAULT": "#3B82F6",
+        "foreground": "#FFFFFF",
+        "glow": "0 0 20px rgba(59, 130, 246, 0.5)"
+      },
+      "success": "#10B981",
+      "warning": "#F59E0B",
+      "danger": "#EF4444",
+      "background": "#FFFFFF",
+      "surface": "#FFFFFF",
+      "surface_alt": "#F8FAFC"
+    },
+    "gradients": {
+      "hero_overlay": "linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.9) 100%)",
+      "brand_mesh": "radial-gradient(at 0% 0%, hsla(222,47%,11%,1) 0, transparent 50%), radial-gradient(at 100% 0%, hsla(217,91%,60%,0.1) 0, transparent 50%)"
+    }
+  },
+  "layout_system": {
+    "container": {
+      "max_width": "max-w-7xl",
+      "padding": "px-6 md:px-12 lg:px-20"
+    },
+    "spacing": {
+      "section_gap": "py-24 md:py-32",
+      "element_gap": "space-y-6"
+    },
+    "grid": {
+      "bento_cols": "grid-cols-1 md:grid-cols-3 lg:grid-cols-12",
+      "dashboard_cols": "grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
+    },
+    "border_radius": {
+      "card": "rounded-2xl",
+      "button": "rounded-full",
+      "input": "rounded-lg"
+    }
+  },
+  "components": {
+    "DomainCard": {
+      "bg": "bg-white",
+      "border": "border border-slate-100",
+      "shadow": "shadow-lg shadow-slate-200/50 hover:shadow-xl hover:shadow-slate-200/60 transition-all duration-300",
+      "typography": "Title: text-xl font-bold font-heading; Price: text-2xl font-bold text-primary",
+      "badges": "rounded-full px-3 py-1 text-xs font-semibold"
+    },
+    "Button": {
+      "primary": "bg-primary text-white hover:bg-primary/90 rounded-full px-8 py-3 font-medium transition-transform active:scale-95",
+      "secondary": "bg-secondary text-primary hover:bg-secondary/80 rounded-full px-6 py-3 font-medium",
+      "outline": "border-2 border-slate-200 hover:border-primary text-primary hover:bg-slate-50 rounded-full px-6 py-3"
+    },
+    "Input": {
+      "style": "bg-slate-50 border-slate-200 focus:ring-2 focus:ring-accent/20 focus:border-accent h-12 rounded-lg"
+    }
+  },
+  "visual_enhancers": {
+    "shadows": {
+      "soft": "shadow-[0_8px_30px_rgb(0,0,0,0.04)]",
+      "glow": "shadow-[0_0_20px_rgba(59,130,246,0.3)]"
+    },
+    "glassmorphism": {
+      "nav": "bg-white/80 backdrop-blur-md border-b border-slate-100/50",
+      "card": "bg-white/60 backdrop-blur-xl border border-white/40 shadow-sm"
+    },
+    "textures": "bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"
+  },
+  "assets": {
+    "images": [
+      {
+        "category": "hero_background",
+        "url": "https://images.unsplash.com/photo-1746470427617-91e8dd28298d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzV8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGRpZ2l0YWwlMjBuZXR3b3JrJTIwYmx1ZSUyMHRlY2hub2xvZ3l8ZW58MHx8fHwxNzcyNTI0NDU3fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Abstract blue/green digital network for hero overlay"
+      },
+      {
+        "category": "trust_office",
+        "url": "https://images.unsplash.com/photo-1758518727707-b023e285b709?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBwcm9mZXNzaW9uYWwlMjBidXNpbmVzcyUyMG9mZmljZSUyMG1lZXRpbmd8ZW58MHx8fHwxNzcyNTI0NDU4fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Professional team in modern office for About/Trust section"
+      },
+      {
+        "category": "tech_infrastructure",
+        "url": "https://images.unsplash.com/photo-1762163516269-3c143e04175c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjd8MHwxfHNlYXJjaHwyfHxoaWdoJTIwdGVjaCUyMHNlcnZlciUyMGRhdGElMjBjZW50ZXIlMjBzZWN1cml0eXxlbnwwfHx8fDE3NzI1MjQ0NTh8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Server rack lights for Features/Security section"
+      },
+      {
+        "category": "testimonial_portrait",
+        "url": "https://images.unsplash.com/photo-1758518727888-ffa196002e59?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwyfHxjb25maWRlbnQlMjBidXNpbmVzcyUyMHByb2Zlc3Npb25hbCUyMHBvcnRyYWl0fGVufDB8fHx8MTc3MjUyNDQ1OXww&ixlib=rb-4.1.0&q=85",
+        "description": "Confident professional woman for testimonial"
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Install 'lucide-react' for icons.",
+    "Install '@radix-ui/react-icons' for additional UI elements if needed.",
+    "Use Shadcn UI components for complex interactions (Dialog, Select, Popover).",
+    "CUSTOMIZE Shadcn components to match the 'DomainCard' and 'Button' specs defined above. Do not use default Shadcn styling if it conflicts with the rounded-full buttons or specific shadows.",
+    "The Hero section must use the 'hero_background' image with a heavy dark blue overlay (90% opacity) to ensure text readability.",
+    "For the '/domains' page, create a sidebar layout with Filters on the left and Grid/List view on the right.",
+    "Admin Panel: Use the 'dashboard_cols' grid. Sidebar navigation must be dark blue (Primary Color). Content area white/gray.",
+    "Ensure all 'data-testid' attributes are added to interactive elements."
+  ],
+  "universal_guidelines": [
+    "Do NOT use Inter font for Headings. Use Outfit.",
+    "Do NOT use generic 'center-everything' layouts. Use asymmetric grids.",
+    "Add 'hover:scale-[1.02]' or similar micro-interactions to all cards.",
+    "Use 'sonner' for toast notifications.",
+    "Respect 'prefers-reduced-motion'."
+  ]
+}
