@@ -98,7 +98,7 @@ const LandingPage = () => {
             <Link href="/" className="flex items-center" data-testid="logo">
               <Image src="/logo-agedify.png" alt="Agedify" width={224} height={56} priority className="h-14 w-auto" />
             </Link>
-            
+
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-2">
               <a href="#benefits" className="px-4 py-2 text-base text-muted-foreground hover:text-foreground transition-all duration-200 rounded-lg hover:bg-accent/10 font-semibold">{t('nav.benefits')}</a>
@@ -107,7 +107,7 @@ const LandingPage = () => {
               <a href="#about" className="px-4 py-2 text-base text-muted-foreground hover:text-foreground transition-all duration-200 rounded-lg hover:bg-accent/10 font-semibold">{t('nav.about')}</a>
               <a href="#contact" className="px-4 py-2 text-base text-muted-foreground hover:text-foreground transition-all duration-200 rounded-lg hover:bg-accent/10 font-semibold">{t('nav.contact')}</a>
             </div>
-            
+
             <div className="hidden md:flex items-center space-x-3">
               <Link href="/wishlist" className="relative p-2 rounded-xl hover:bg-accent/10 transition-all duration-200" data-testid="wishlist-nav-icon">
                 <Heart className={`w-5 h-5 transition-colors ${wishlistCount > 0 ? 'text-rose-500 fill-rose-500' : 'text-muted-foreground'}`} />
@@ -139,7 +139,7 @@ const LandingPage = () => {
               </Link>
               <LanguageToggle />
               <ThemeToggle />
-              <button 
+              <button
                 className="p-2 text-foreground rounded-lg hover:bg-accent/10 transition-colors"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 data-testid="mobile-menu-btn"
@@ -173,18 +173,18 @@ const LandingPage = () => {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden" data-testid="hero-section">
         <div className="absolute inset-0 hero-pattern"></div>
-        
+
         {/* Particle Network Background */}
         <ParticleField />
 
         {/* Animated Background Blobs with parallax */}
         <div className={`absolute top-20 right-10 w-72 h-72 ${isDark ? 'bg-violet-500/20' : 'bg-violet-500/10'} rounded-full blur-3xl animate-float`} style={{ zIndex: 0 }}></div>
-        <div className={`absolute bottom-20 left-10 w-96 h-96 ${isDark ? 'bg-cyan-500/15' : 'bg-cyan-500/10'} rounded-full blur-3xl animate-float`} style={{animationDelay: '2s', zIndex: 0}}></div>
+        <div className={`absolute bottom-20 left-10 w-96 h-96 ${isDark ? 'bg-cyan-500/15' : 'bg-cyan-500/10'} rounded-full blur-3xl animate-float`} style={{ animationDelay: '2s', zIndex: 0 }}></div>
         <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] ${isDark ? 'bg-violet-500/5' : 'bg-violet-500/5'} rounded-full blur-3xl`} style={{ zIndex: 0 }}></div>
 
         {/* Floating Animated Illustrations */}
         <HeroAnimations />
-        
+
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8" style={{ zIndex: 3 }}>
           <div className="text-center max-w-4xl mx-auto">
             <span className={`inline-flex items-center gap-2 px-4 py-2 ${isDark ? 'bg-violet-500/20 text-violet-300 border border-violet-500/30' : 'bg-violet-50 text-violet-600 border border-violet-200'} rounded-full text-sm font-semibold mb-8 animate-fade-in-up`}>
@@ -218,7 +218,7 @@ const LandingPage = () => {
                 </Button>
               </a>
             </div>
-            
+
             {/* Trust Badges */}
             <div className="mt-16 flex flex-wrap items-center justify-center gap-8 animate-fade-in-up animation-delay-400">
               <div className="flex items-center gap-2 text-muted-foreground group cursor-default">
@@ -249,11 +249,11 @@ const LandingPage = () => {
               </h2>
             </div>
           </ScrollReveal>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
               <ScrollReveal key={index} direction="up" delay={index * 120} duration={600}>
-                <div 
+                <div
                   className={`group relative ${isDark ? 'bg-card/80' : 'bg-white'} rounded-2xl p-8 card-glow border border-border/50 hover:border-violet-500/30 transition-all duration-300 h-full`}
                   data-testid={`benefit-card-${index}`}
                 >
@@ -287,97 +287,96 @@ const LandingPage = () => {
 
           <ScrollReveal direction="up" delay={150} duration={700}>
             <div className={`${isDark ? 'bg-card/50 border border-border/50' : 'bg-white border border-border/30'} rounded-3xl shadow-xl overflow-hidden backdrop-blur-sm`}>
-            <div className="overflow-x-auto">
-              <table className="w-full" data-testid="featured-domains-table">
-                <thead>
-                  <tr className={`${isDark ? 'bg-secondary/50' : 'bg-slate-50/80'} border-b border-border/50`}>
-                    <th className="text-left py-5 px-6 font-semibold text-muted-foreground text-sm">Domain</th>
-                    <th className="text-center py-5 px-4 font-semibold text-muted-foreground text-sm">DR</th>
-                    <th className="text-center py-5 px-4 font-semibold text-muted-foreground text-sm">DA</th>
-                    <th className="text-center py-5 px-4 font-semibold text-muted-foreground text-sm hidden md:table-cell">Ref Domains</th>
-                    <th className="text-center py-5 px-4 font-semibold text-muted-foreground text-sm hidden md:table-cell">Indexed</th>
-                    <th className="text-center py-5 px-4 font-semibold text-muted-foreground text-sm hidden sm:table-cell">Age</th>
-                    <th className="text-right py-5 px-6 font-semibold text-muted-foreground text-sm">Price</th>
-                    <th className="text-center py-5 px-6 font-semibold text-muted-foreground text-sm">Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {loading ? (
-                    <tr>
-                      <td colSpan="8" className="text-center py-16">
-                        <div className="animate-spin rounded-full h-10 w-10 border-2 border-violet-500 border-t-transparent mx-auto"></div>
-                      </td>
+              <div className="overflow-x-auto">
+                <table className="w-full" data-testid="featured-domains-table">
+                  <thead>
+                    <tr className={`${isDark ? 'bg-secondary/50' : 'bg-slate-50/80'} border-b border-border/50`}>
+                      <th className="text-left py-5 px-6 font-semibold text-muted-foreground text-sm">Domain</th>
+                      <th className="text-center py-5 px-4 font-semibold text-muted-foreground text-sm">DR</th>
+                      <th className="text-center py-5 px-4 font-semibold text-muted-foreground text-sm">DA</th>
+                      <th className="text-center py-5 px-4 font-semibold text-muted-foreground text-sm hidden md:table-cell">Ref Domains</th>
+                      <th className="text-center py-5 px-4 font-semibold text-muted-foreground text-sm hidden md:table-cell">Indexed</th>
+                      <th className="text-center py-5 px-4 font-semibold text-muted-foreground text-sm hidden sm:table-cell">Age</th>
+                      <th className="text-right py-5 px-6 font-semibold text-muted-foreground text-sm">Price</th>
+                      <th className="text-center py-5 px-6 font-semibold text-muted-foreground text-sm">Action</th>
                     </tr>
-                  ) : featuredDomains.length === 0 ? (
-                    <tr>
-                      <td colSpan="8" className="text-center py-16 text-muted-foreground">
-                        No domains available yet. Check back soon!
-                      </td>
-                    </tr>
-                  ) : (
-                    featuredDomains.map((domain, index) => (
-                      <tr key={domain.id} className="border-b border-border/50 hover:bg-accent/5 transition-colors duration-200" data-testid={`domain-row-${index}`}>
-                        <td className="py-5 px-6">
-                          <span className="font-semibold text-foreground">{domain.domain_name}</span>
-                        </td>
-                        <td className="text-center py-5 px-4">
-                          <span className={`inline-flex items-center justify-center w-10 h-10 rounded-xl ${isDark ? 'bg-emerald-500/20 text-emerald-400' : 'bg-emerald-50 text-emerald-600'} font-bold text-sm`}>
-                            {domain.dr}
-                          </span>
-                        </td>
-                        <td className="text-center py-5 px-4">
-                          <span className={`inline-flex items-center justify-center w-10 h-10 rounded-xl ${isDark ? 'bg-blue-500/20 text-blue-400' : 'bg-blue-50 text-blue-600'} font-bold text-sm`}>
-                            {domain.da}
-                          </span>
-                        </td>
-                        <td className="text-center py-5 px-4 text-muted-foreground font-medium hidden md:table-cell">{domain.backlinks?.toLocaleString()}</td>
-                        <td className="text-center py-5 px-4 hidden md:table-cell">
-                          {(domain.indexed ?? 0) > 0 ? (
-                            <span className={`inline-flex items-center justify-center w-8 h-8 rounded-full ${isDark ? 'bg-emerald-500/20 text-emerald-400' : 'bg-emerald-50 text-emerald-600'}`}><CheckCircle className="w-4 h-4" /></span>
-                          ) : (
-                            <span className={`inline-flex items-center justify-center w-8 h-8 rounded-full ${isDark ? 'bg-red-500/20 text-red-400' : 'bg-red-50 text-red-500'}`}><X className="w-4 h-4" /></span>
-                          )}
-                        </td>
-                        <td className="text-center py-5 px-4 text-muted-foreground font-medium hidden sm:table-cell">{domain.age} yrs</td>
-                        <td className="text-right py-5 px-6">
-                          {(domain.discount_percentage ?? 0) > 0 ? (
-                            <div>
-                              <span className="text-sm text-muted-foreground line-through block">${domain.price?.toLocaleString()}</span>
-                              <span className="font-bold text-foreground text-lg">${(domain.price * (1 - domain.discount_percentage / 100)).toLocaleString(undefined, {maximumFractionDigits: 0})}</span>
-                              <span className={`ml-1 text-xs font-semibold px-1.5 py-0.5 rounded-full ${isDark ? 'bg-emerald-500/20 text-emerald-400' : 'bg-emerald-50 text-emerald-600'}`}>-{domain.discount_percentage}%</span>
-                            </div>
-                          ) : (
-                            <span className="font-bold text-foreground text-lg">${domain.price?.toLocaleString()}</span>
-                          )}
-                        </td>
-                        <td className="text-center py-5 px-6">
-                          <div className="flex items-center justify-center gap-2">
-                            <button
-                              onClick={() => toggleWishlist(domain)}
-                              className={`p-2 rounded-xl transition-all duration-200 ${
-                                isInWishlist(domain.id)
-                                  ? 'text-rose-500'
-                                  : (isDark ? 'hover:bg-white/10 text-muted-foreground hover:text-rose-400' : 'hover:bg-rose-50 text-slate-400 hover:text-rose-500')
-                              }`}
-                              title={isInWishlist(domain.id) ? 'Remove from wishlist' : 'Add to wishlist'}
-                              data-testid={`wishlist-featured-btn-${index}`}
-                            >
-                              <Heart className={`w-4 h-4 ${isInWishlist(domain.id) ? 'fill-current' : ''}`} />
-                            </button>
-                            <Link href={`/domain/${domain.slug}`}>
-                              <Button size="sm" className="btn-gradient text-white rounded-full px-5 shadow-md shadow-violet-500/20 hover:shadow-violet-500/30">
-                                View
-                              </Button>
-                            </Link>
-                          </div>
+                  </thead>
+                  <tbody>
+                    {loading ? (
+                      <tr>
+                        <td colSpan="8" className="text-center py-16">
+                          <div className="animate-spin rounded-full h-10 w-10 border-2 border-violet-500 border-t-transparent mx-auto"></div>
                         </td>
                       </tr>
-                    ))
-                  )}
-                </tbody>
-              </table>
+                    ) : featuredDomains.length === 0 ? (
+                      <tr>
+                        <td colSpan="8" className="text-center py-16 text-muted-foreground">
+                          No domains available yet. Check back soon!
+                        </td>
+                      </tr>
+                    ) : (
+                      featuredDomains.map((domain, index) => (
+                        <tr key={domain.id} className="border-b border-border/50 hover:bg-accent/5 transition-colors duration-200" data-testid={`domain-row-${index}`}>
+                          <td className="py-5 px-6">
+                            <span className="font-semibold text-foreground">{domain.domain_name}</span>
+                          </td>
+                          <td className="text-center py-5 px-4">
+                            <span className={`inline-flex items-center justify-center w-10 h-10 rounded-xl ${isDark ? 'bg-emerald-500/20 text-emerald-400' : 'bg-emerald-50 text-emerald-600'} font-bold text-sm`}>
+                              {domain.dr}
+                            </span>
+                          </td>
+                          <td className="text-center py-5 px-4">
+                            <span className={`inline-flex items-center justify-center w-10 h-10 rounded-xl ${isDark ? 'bg-blue-500/20 text-blue-400' : 'bg-blue-50 text-blue-600'} font-bold text-sm`}>
+                              {domain.da}
+                            </span>
+                          </td>
+                          <td className="text-center py-5 px-4 text-muted-foreground font-medium hidden md:table-cell">{domain.backlinks?.toLocaleString()}</td>
+                          <td className="text-center py-5 px-4 hidden md:table-cell">
+                            {(domain.indexed ?? 0) > 0 ? (
+                              <span className={`inline-flex items-center justify-center w-8 h-8 rounded-full ${isDark ? 'bg-emerald-500/20 text-emerald-400' : 'bg-emerald-50 text-emerald-600'}`}><CheckCircle className="w-4 h-4" /></span>
+                            ) : (
+                              <span className={`inline-flex items-center justify-center w-8 h-8 rounded-full ${isDark ? 'bg-red-500/20 text-red-400' : 'bg-red-50 text-red-500'}`}><X className="w-4 h-4" /></span>
+                            )}
+                          </td>
+                          <td className="text-center py-5 px-4 text-muted-foreground font-medium hidden sm:table-cell">{domain.age} yrs</td>
+                          <td className="text-right py-5 px-6">
+                            {(domain.discount_percentage ?? 0) > 0 ? (
+                              <div>
+                                <span className="text-sm text-muted-foreground line-through block">${domain.price?.toLocaleString()}</span>
+                                <span className="font-bold text-foreground text-lg">${(domain.price * (1 - domain.discount_percentage / 100)).toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
+                                <span className={`ml-1 text-xs font-semibold px-1.5 py-0.5 rounded-full ${isDark ? 'bg-emerald-500/20 text-emerald-400' : 'bg-emerald-50 text-emerald-600'}`}>-{domain.discount_percentage}%</span>
+                              </div>
+                            ) : (
+                              <span className="font-bold text-foreground text-lg">${domain.price?.toLocaleString()}</span>
+                            )}
+                          </td>
+                          <td className="text-center py-5 px-6">
+                            <div className="flex items-center justify-center gap-2">
+                              <button
+                                onClick={() => toggleWishlist(domain)}
+                                className={`p-2 rounded-xl transition-all duration-200 ${isInWishlist(domain.id)
+                                    ? 'text-rose-500'
+                                    : (isDark ? 'hover:bg-white/10 text-muted-foreground hover:text-rose-400' : 'hover:bg-rose-50 text-slate-400 hover:text-rose-500')
+                                  }`}
+                                title={isInWishlist(domain.id) ? 'Remove from wishlist' : 'Add to wishlist'}
+                                data-testid={`wishlist-featured-btn-${index}`}
+                              >
+                                <Heart className={`w-4 h-4 ${isInWishlist(domain.id) ? 'fill-current' : ''}`} />
+                              </button>
+                              <Link href={`/domain/${domain.slug}`}>
+                                <Button size="sm" className="btn-gradient text-white rounded-full px-5 shadow-md shadow-violet-500/20 hover:shadow-violet-500/30">
+                                  View
+                                </Button>
+                              </Link>
+                            </div>
+                          </td>
+                        </tr>
+                      ))
+                    )}
+                  </tbody>
+                </table>
+              </div>
             </div>
-          </div>
           </ScrollReveal>
 
           <ScrollReveal direction="up" delay={250}>
@@ -457,8 +456,8 @@ const LandingPage = () => {
             <ScrollReveal direction="right" delay={200} duration={700}>
               <div className="relative">
                 <div className={`${isDark ? 'bg-gradient-to-br from-violet-500/20 to-cyan-500/20' : 'bg-gradient-to-br from-violet-100 to-cyan-100'} rounded-3xl overflow-hidden p-1`}>
-                  <Image 
-                    src="https://images.unsplash.com/photo-1758518727707-b023e285b709?crop=entropy&cs=srgb&fm=jpg&q=85&w=600" 
+                  <Image
+                    src="https://images.unsplash.com/photo-1758518727707-b023e285b709?crop=entropy&cs=srgb&fm=jpg&q=85&w=600"
                     alt="Professional team"
                     width={600}
                     height={400}
@@ -501,49 +500,49 @@ const LandingPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {blogPosts.map((post, index) => (
                 <ScrollReveal key={post.id} direction="up" delay={index * 150} duration={600}>
-                  <Link 
+                  <Link
                     href={`/blog/${post.slug}`}
                     className={`${isDark ? 'bg-card' : 'bg-white'} rounded-2xl shadow-lg overflow-hidden card-hover group block h-full`}
                     data-testid={`blog-card-${index}`}
                   >
-                  {post.featured_image ? (
-                    <div className="aspect-video overflow-hidden relative">
-                      <Image 
-                        src={post.featured_image.startsWith('/api') ? post.featured_image : post.featured_image}
-                        alt={post.title}
-                        fill
-                        sizes="(max-width: 768px) 100vw, 33vw"
-                        className="object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
-                  ) : (
-                    <div className={`aspect-video ${isDark ? 'bg-slate-800' : 'bg-slate-100'} flex items-center justify-center`}>
-                      <FileText className={`w-12 h-12 ${isDark ? 'text-slate-600' : 'text-slate-300'}`} />
-                    </div>
-                  )}
-                  <div className="p-6">
-                    {post.category && (
-                      <span className={`inline-block px-3 py-1 text-xs font-semibold rounded-full mb-3 ${isDark ? 'bg-blue-500/20 text-blue-400' : 'bg-blue-50 text-blue-600'}`}>
-                        {post.category.name}
-                      </span>
+                    {post.featured_image ? (
+                      <div className="aspect-video overflow-hidden relative">
+                        <Image
+                          src={post.featured_image.startsWith('/api') ? post.featured_image : post.featured_image}
+                          alt={post.title}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 33vw"
+                          className="object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    ) : (
+                      <div className={`aspect-video ${isDark ? 'bg-slate-800' : 'bg-slate-100'} flex items-center justify-center`}>
+                        <FileText className={`w-12 h-12 ${isDark ? 'text-slate-600' : 'text-slate-300'}`} />
+                      </div>
                     )}
-                    <h3 className="text-lg font-bold text-foreground mb-2 line-clamp-2 group-hover:text-blue-500 transition-colors">
-                      {post.title}
-                    </h3>
-                    {post.excerpt && (
-                      <p className="text-muted-foreground text-sm line-clamp-2 mb-4">
-                        {post.excerpt}
-                      </p>
-                    )}
-                    <div className="flex items-center text-sm text-muted-foreground">
-                      <Calendar className="w-4 h-4 mr-1.5" />
-                      {new Date(post.published_at || post.created_at).toLocaleDateString('id-ID', {
-                        year: 'numeric',
-                        month: 'short',
-                        day: 'numeric'
-                      })}
+                    <div className="p-6">
+                      {post.category && (
+                        <span className={`inline-block px-3 py-1 text-xs font-semibold rounded-full mb-3 ${isDark ? 'bg-blue-500/20 text-blue-400' : 'bg-blue-50 text-blue-600'}`}>
+                          {post.category.name}
+                        </span>
+                      )}
+                      <h3 className="text-lg font-bold text-foreground mb-2 line-clamp-2 group-hover:text-blue-500 transition-colors">
+                        {post.title}
+                      </h3>
+                      {post.excerpt && (
+                        <p className="text-muted-foreground text-sm line-clamp-2 mb-4">
+                          {post.excerpt}
+                        </p>
+                      )}
+                      <div className="flex items-center text-sm text-muted-foreground">
+                        <Calendar className="w-4 h-4 mr-1.5" />
+                        {new Date(post.published_at || post.created_at).toLocaleDateString('id-ID', {
+                          year: 'numeric',
+                          month: 'short',
+                          day: 'numeric'
+                        })}
+                      </div>
                     </div>
-                  </div>
                   </Link>
                 </ScrollReveal>
               ))}
@@ -551,9 +550,9 @@ const LandingPage = () => {
           ) : (
             <ScrollReveal direction="up">
               <div className={`${isDark ? 'bg-card' : 'bg-white'} rounded-2xl p-12 text-center`}>
-              <FileText className={`w-16 h-16 ${isDark ? 'text-slate-600' : 'text-slate-300'} mx-auto mb-4`} />
-              <p className="text-muted-foreground">{t('blog.noBlogYet')}</p>
-            </div>
+                <FileText className={`w-16 h-16 ${isDark ? 'text-slate-600' : 'text-slate-300'} mx-auto mb-4`} />
+                <p className="text-muted-foreground">{t('blog.noBlogYet')}</p>
+              </div>
             </ScrollReveal>
           )}
 
@@ -583,7 +582,7 @@ const LandingPage = () => {
           <div className="space-y-4">
             {(t('faq.items') || faqs).map((faq, index) => (
               <ScrollReveal key={index} direction="up" delay={index * 100} duration={500}>
-                <div 
+                <div
                   className={`${isDark ? 'bg-card' : 'bg-white'} rounded-2xl shadow-sm overflow-hidden`}
                   data-testid={`faq-item-${index}`}
                 >
@@ -617,96 +616,96 @@ const LandingPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <ScrollReveal direction="left" duration={700}>
               <div>
-              <span className="text-sm font-semibold text-blue-500 tracking-wide uppercase">{t('contactForm.badge')}</span>
-              <h2 className="mt-3 text-3xl md:text-4xl font-bold text-foreground mb-6">
-                {t('contactForm.heading')}
-              </h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                {t('contactForm.subtitle')}
-              </p>
-              
-              <div className="space-y-6">
-                <div className="flex items-center">
-                  <div className={`w-12 h-12 ${isDark ? 'bg-blue-500/20' : 'bg-blue-50'} rounded-xl flex items-center justify-center mr-4`}>
-                    <Mail className={`w-6 h-6 ${isDark ? 'text-blue-400' : 'text-blue-600'}`} />
+                <span className="text-sm font-semibold text-blue-500 tracking-wide uppercase">{t('contactForm.badge')}</span>
+                <h2 className="mt-3 text-3xl md:text-4xl font-bold text-foreground mb-6">
+                  {t('contactForm.heading')}
+                </h2>
+                <p className="text-lg text-muted-foreground mb-8">
+                  {t('contactForm.subtitle')}
+                </p>
+
+                <div className="space-y-6">
+                  <div className="flex items-center">
+                    <div className={`w-12 h-12 ${isDark ? 'bg-blue-500/20' : 'bg-blue-50'} rounded-xl flex items-center justify-center mr-4`}>
+                      <Mail className={`w-6 h-6 ${isDark ? 'text-blue-400' : 'text-blue-600'}`} />
+                    </div>
+                    <div>
+                      <p className="text-sm text-muted-foreground">{t('contactForm.emailLabel')}</p>
+                      <p className="font-semibold text-foreground">support@agedify.com</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">{t('contactForm.emailLabel')}</p>
-                    <p className="font-semibold text-foreground">support@agedify.com</p>
+                  <div className="flex items-center">
+                    <div className={`w-12 h-12 ${isDark ? 'bg-blue-500/20' : 'bg-blue-50'} rounded-xl flex items-center justify-center mr-4`}>
+                      <Phone className={`w-6 h-6 ${isDark ? 'text-blue-400' : 'text-blue-600'}`} />
+                    </div>
+                    <div>
+                      <p className="text-sm text-muted-foreground">{t('contactForm.phoneLabel')}</p>
+                      <p className="font-semibold text-foreground">+62 8999-4350-54</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center">
+                    <div className={`w-12 h-12 ${isDark ? 'bg-blue-500/20' : 'bg-blue-50'} rounded-xl flex items-center justify-center mr-4`}>
+                      <MapPin className={`w-6 h-6 ${isDark ? 'text-blue-400' : 'text-blue-600'}`} />
+                    </div>
+                    <div>
+                      <p className="text-sm text-muted-foreground">{t('contactForm.locationLabel')}</p>
+                      <p className="font-semibold text-foreground">{t('contactForm.locationValue')}</p>
+                    </div>
                   </div>
                 </div>
-                <div className="flex items-center">
-                  <div className={`w-12 h-12 ${isDark ? 'bg-blue-500/20' : 'bg-blue-50'} rounded-xl flex items-center justify-center mr-4`}>
-                    <Phone className={`w-6 h-6 ${isDark ? 'text-blue-400' : 'text-blue-600'}`} />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">{t('contactForm.phoneLabel')}</p>
-                    <p className="font-semibold text-foreground">+1 (555) 123-4567</p>
-                  </div>
-                </div>
-                <div className="flex items-center">
-                  <div className={`w-12 h-12 ${isDark ? 'bg-blue-500/20' : 'bg-blue-50'} rounded-xl flex items-center justify-center mr-4`}>
-                    <MapPin className={`w-6 h-6 ${isDark ? 'text-blue-400' : 'text-blue-600'}`} />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">{t('contactForm.locationLabel')}</p>
-                    <p className="font-semibold text-foreground">{t('contactForm.locationValue')}</p>
-                  </div>
-                </div>
-              </div>
               </div>
             </ScrollReveal>
 
             <ScrollReveal direction="right" delay={200} duration={700}>
               <div className={`${isDark ? 'bg-card' : 'bg-white'} rounded-2xl shadow-lg p-8`}>
-              <form onSubmit={handleContactSubmit} data-testid="contact-form">
-                <div className="space-y-6">
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">{t('contactForm.name')}</label>
-                    <Input
-                      data-testid="contact-name-input"
-                      placeholder={t('contactForm.namePlaceholder')}
-                      value={contactForm.name}
-                      onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
-                      required
-                      className="h-12 rounded-lg"
-                    />
+                <form onSubmit={handleContactSubmit} data-testid="contact-form">
+                  <div className="space-y-6">
+                    <div>
+                      <label className="block text-sm font-medium text-foreground mb-2">{t('contactForm.name')}</label>
+                      <Input
+                        data-testid="contact-name-input"
+                        placeholder={t('contactForm.namePlaceholder')}
+                        value={contactForm.name}
+                        onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
+                        required
+                        className="h-12 rounded-lg"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-foreground mb-2">{t('contactForm.email')}</label>
+                      <Input
+                        data-testid="contact-email-input"
+                        type="email"
+                        placeholder={t('contactForm.emailPlaceholder')}
+                        value={contactForm.email}
+                        onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}
+                        required
+                        className="h-12 rounded-lg"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-foreground mb-2">{t('contactForm.message')}</label>
+                      <Textarea
+                        data-testid="contact-message-input"
+                        placeholder={t('contactForm.messagePlaceholder')}
+                        value={contactForm.message}
+                        onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
+                        required
+                        rows={5}
+                        className="rounded-lg resize-none"
+                      />
+                    </div>
+                    <Button
+                      type="submit"
+                      disabled={submitting}
+                      className={`w-full ${isDark ? 'bg-white text-[#0F172A] hover:bg-slate-100' : 'bg-[#0F172A] hover:bg-[#1E293B] text-white'} rounded-full py-6 text-lg btn-active`}
+                      data-testid="contact-submit-btn"
+                    >
+                      {submitting ? t('contactForm.sending') : t('contactForm.submit')}
+                    </Button>
                   </div>
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">{t('contactForm.email')}</label>
-                    <Input
-                      data-testid="contact-email-input"
-                      type="email"
-                      placeholder={t('contactForm.emailPlaceholder')}
-                      value={contactForm.email}
-                      onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}
-                      required
-                      className="h-12 rounded-lg"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">{t('contactForm.message')}</label>
-                    <Textarea
-                      data-testid="contact-message-input"
-                      placeholder={t('contactForm.messagePlaceholder')}
-                      value={contactForm.message}
-                      onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
-                      required
-                      rows={5}
-                      className="rounded-lg resize-none"
-                    />
-                  </div>
-                  <Button 
-                    type="submit" 
-                    disabled={submitting}
-                    className={`w-full ${isDark ? 'bg-white text-[#0F172A] hover:bg-slate-100' : 'bg-[#0F172A] hover:bg-[#1E293B] text-white'} rounded-full py-6 text-lg btn-active`}
-                    data-testid="contact-submit-btn"
-                  >
-                    {submitting ? t('contactForm.sending') : t('contactForm.submit')}
-                  </Button>
-                </div>
-              </form>
-            </div>
+                </form>
+              </div>
             </ScrollReveal>
           </div>
         </div>
@@ -724,7 +723,7 @@ const LandingPage = () => {
                 {t('footer.tagline')}
               </p>
             </div>
-            
+
             <div>
               <h4 className="font-semibold text-white mb-4">{t('footer.quickLinks')}</h4>
               <ul className="space-y-3">
@@ -735,7 +734,7 @@ const LandingPage = () => {
                 <li><a href="#" className="text-slate-400 hover:text-white transition-colors">{t('footer.faqLink')}</a></li>
               </ul>
             </div>
-            
+
             <div>
               <h4 className="font-semibold text-white mb-4">{t('footer.legal')}</h4>
               <ul className="space-y-3">
@@ -745,7 +744,7 @@ const LandingPage = () => {
               </ul>
             </div>
           </div>
-          
+
           <div className="border-t border-slate-800 mt-12 pt-8 text-center">
             <p className="text-slate-400">&copy; {new Date().getFullYear()} Agedify. {t('footer.copyright')}</p>
           </div>
