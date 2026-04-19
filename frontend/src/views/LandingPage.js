@@ -171,7 +171,7 @@ const LandingPage = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden" data-testid="hero-section">
+      <section className="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden min-h-screen flex flex-col justify-center" data-testid="hero-section">
         <div className="absolute inset-0 hero-pattern"></div>
 
         {/* Particle Network Background */}
@@ -185,7 +185,7 @@ const LandingPage = () => {
         {/* Floating Animated Illustrations */}
         <HeroAnimations />
 
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8" style={{ zIndex: 3 }}>
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-8 w-full" style={{ zIndex: 3 }}>
           <div className="text-center max-w-4xl mx-auto">
             <span className={`inline-flex items-center gap-2 px-4 py-2 ${isDark ? 'bg-violet-500/20 text-violet-300 border border-violet-500/30' : 'bg-violet-50 text-violet-600 border border-violet-200'} rounded-full text-sm font-semibold mb-8 animate-fade-in-up`}>
               <span className="relative flex h-2 w-2">
